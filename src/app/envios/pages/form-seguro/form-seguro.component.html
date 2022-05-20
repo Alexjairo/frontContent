@@ -1,4 +1,4 @@
-<form action="" class="form-general">
+<form class="form-general" (ngSubmit)="create()" (formGroup)="formulario">
     <div class="from-item-group">
 
         <div class="from-item-group-content" id="paquete_envio">
@@ -14,7 +14,8 @@
                 <div class="from-control-label col-2">
                     <label class="from-control-label" for="name"> Nombre</label>
                 </div>
-                <input type="text" id="name" name="name" placeholder="">
+                <input type="text" id="name" name="name" placeholder="" formControlName="tipo_seguro">
+                <div class="invalid" *ngIf="formulario.controls['tipo_seguro'].touched && formulario.controls['tipo_seguro'].hasError('required')">El campo es obligatorio</div>
             </div>
             <div class="from-row">
                 <div class="from-control-label col-2">
@@ -34,6 +35,12 @@
                 </div>
                 <textarea type="text" id="envio_desc" name="desc_envio" placeholder=""></textarea>
             </div>
+        </div>
+    </div>
+    <div class="btn-item">
+        <div class="centrar">
+            <button> Crear </button>
+
         </div>
     </div>
 

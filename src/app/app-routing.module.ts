@@ -20,7 +20,7 @@ loadChildren: ()=> import('./log/log.module').then(m => m.LogModule)
 
 {
   path:'**',
-  redirectTo: 'auth'
+  redirectTo: 'profile'
 }
 
 ];

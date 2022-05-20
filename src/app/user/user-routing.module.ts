@@ -6,7 +6,8 @@ const routes: Routes = [
   {
     path :'',
     children:[
-      {path:'profile', component:PerfilComponent}
+      {path:'profile', component:PerfilComponent},
+      { path: '**', redirectTo: 'profile'}
     ]
   }
 ];

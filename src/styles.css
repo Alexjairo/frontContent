@@ -206,3 +206,7 @@ a {
     font-size: 14px;
     display: block;
 }
+
+td {
+    font-size: 12px !important;
+}

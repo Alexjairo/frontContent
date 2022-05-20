@@ -16,16 +16,16 @@
                     <div class="label">Descripción</div>
                 </div>
             </th>
-            <th>
+            <!-- <th>
                 <div class="title-table">
                     <div class="label">Precio</div>
                 </div>
-            </th>
-            <th>
+            </th> -->
+            <!-- <th>
                 <div class="title-table">
                     <div class="label">Estado</div>
                 </div>
-            </th>
+            </th> -->
             <th colspan="2">
                 <div class="title-table">
                     <div class="label op">Opciónes
@@ -40,12 +40,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>ABC</td>
-            <td>jairo</td>
-            <td>Irún</td>
-            <td>Madrid</td>
-            <td>Pndiente</td>
+
+        <tr *ngFor="let seguro of seguro">
+            <td>{{seguro.cod_seguros}}</td>
+            <td>{{seguro.tipo_seguro}}</td>
+            <td>{{seguro.descripcion}}</td>
             <td class="icon-cont" colspan="2">
                 <div class="icon_setting">
                     <a href="" class="mx-1"> <i class="fas fa-edit color-warning edit"></i></a>
@@ -53,12 +52,15 @@
                     <a href="" class="mx-1"> <i class="fas fa-ban color-danger danger"></i></a>
                 </div>
             </td>
+            <!-- <td>{{seguro.}}</td>
+            <td>{{seguro.}}</td> -->
         </tr>
-        <tr>
-            <td class="desc " colspan="7">
+
+        <!-- <tr>
+            <td class="desc " colspan="5">
                 <div class="desc-content d-flex mx-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ducimus molestias doloremque repudiandae nihil iusto eos eligendi tempora aperiam culpa, praesentium dolor, molestiae quam.</div>
             </td>
-        </tr>
+        </tr> -->
 
 
     </tbody>

@@ -35,7 +35,7 @@
 
                         </div>
                         <div class="content-body-info col-6">
-                            <form action="" class="form-general">
+                            <form action="" class="form-general" *ngFor="let user of user">
                                 <div class="from-item-group">
                                     <div class="from-item-group-content" id="emisor">
                                         <div class="from-row-tittle d-flex">
@@ -53,31 +53,31 @@
                                                         <div class="from-control-label col-2">
                                                             <label class="from-control-label" for="nombre">Nombre</label>
                                                         </div>
-                                                        <input class="from-control-label" class="input-lable" type="text" id="nombre" name="nombre">
+                                                        <input class="from-control-label" class="input-lable" type="text" id="nombre" name="nombre" value="{{user.nombre}}">
                                                     </div>
                                                     <div class="from-row">
                                                         <div class="from-control-label col-2">
                                                             <label class="from-control-label" for="apellido">Apellido</label>
                                                         </div>
-                                                        <input type="text" id="apellido" name="apellido">
+                                                        <input type="text" id="apellido" name="apellido" value="{{user.apellido}}">
                                                     </div>
                                                     <div class="from-row">
                                                         <div class="from-control-label col-2">
                                                             <label class="from-control-label" for="direc"> Dirección</label>
                                                         </div>
-                                                        <input type="text" id="direc" name="direc">
+                                                        <input type="text" id="direc" name="direc" value="{{user.direccion}}">
                                                     </div>
                                                     <div class="from-row">
                                                         <div class="from-control-label col-2">
                                                             <label class="from-control-label" for="dni"> DNI</label>
                                                         </div>
-                                                        <input type="text" id="dni_p" name="dni_p" maxlength="4">
+                                                        <input type="text" id="dni_p" name="dni_p" maxlength="4" value="{{user.dni}}">
                                                     </div>
                                                     <div class="from-row">
                                                         <div class="from-control-label col-2">
                                                             <label class="from-control-label" for="telf"> Teléfono</label>
                                                         </div>
-                                                        <input type="text" id="telf" name="telf" maxlength="4">
+                                                        <input type="text" id="telf" name="telf" maxlength="4" value="{{user.telefono}}">
                                                     </div>
 
                                                 </div>
@@ -87,7 +87,7 @@
                                                             <div class="from-control-label col-2">
                                                                 <label class="from-control-label" for="pssword">Contraseña</label>
                                                             </div>
-                                                            <input class="pass" type="password" id="password" name="password">
+                                                            <input class="pass" type="password" id="password" name="password" value="{{user.password}}">
                                                             <div class="view-content-icon">
                                                                 <div id="view-a" class=" view view-active"><i class="fa-solid fa-eye "></i></div>
                                                                 <div id="view-d" class=" view view-disabled"><i class="fa-solid fa-eye-slash "></i></div>

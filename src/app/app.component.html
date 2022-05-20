@@ -1,17 +1,9 @@
-<!-- <h1>HOka</h1>
-<ul>
-    <li><a href="" routerLink="/auth/login">Login</a></li>
-    <li><a href="" routerLink="/auth/forgot">forgot</a></li>
-    <li><a href="" routerLink="/auth/registro">registro</a></li>
-</ul>
-<ul>
-    <li><a href="" routerLink="/envios/crear">crear</a></li>
-    <li><a href="" routerLink="/envios/editar">editar</a></li>
-    <li><a href="" routerLink="/envios/listado">listado</a></li>
-    <li><a href="" routerLink="/envios/envio">listado</a></li>
-</ul> -->
-<div class="main">
+<div class="estado-i active" *ngIf="view" (click)="mostrar()">
+    <app-login></app-login>
 
+</div>
+
+<div class="main" *ngIf="view2">
     <div class="slidenav">
         <div class="logo ">
             <img src="../assets/images/logo_jace_verde.png" alt=""><i class="fa fa-angle-left"></i>
@@ -22,7 +14,6 @@
                     <div class="menu-item">
                         <div class="menu-item-label-content">
                             <div class="menu-item-label-content-element">
-                                <!-- <span>Lista</span> -->
                             </div>
 
                         </div>
@@ -70,7 +61,7 @@
                             <div class="icon-down"></div>
                         </div>
                     </div>
-                    <div class="menu-item-group menu-element">
+                    <!-- <div class="menu-item-group menu-element">
                         <div class="menu-item-label-content item">
                             <div class="menu-item-label-content-element element">
                                 <span>
@@ -80,7 +71,7 @@
                             </div>
                             <div class="icon-down"></div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -145,10 +136,7 @@
         <div id="content" class="">
             <div class="content-view">
                 <div class="container">
-                    <!-- <div class="row">
-                        <div class="col col-12 mb-3"></div>
-                        <h4></h4>
-                    </div> -->
+
                     <router-outlet></router-outlet>
                 </div>
 

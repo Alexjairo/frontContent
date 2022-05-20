@@ -3,6 +3,14 @@ a {
     background-color: transparent !important;
 }
 
+.view {
+    display: none !important;
+}
+
+.azul {
+    background-color: #8f0222;
+}
+
 .main {
     display: flex;
     height: 100%;

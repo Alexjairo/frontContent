@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeguroService } from './seguro.service';
 
 @Component({
   selector: 'app-seguro',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seguro.component.css']
 })
 export class SeguroComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+seguro:any[] =[];
+  constructor(
+    private appService: SeguroService
+    ){
+    }
+      ngOnInit(): void {
+        this.appService.getAll()
+        .subscribe((data: any ) => {
+          this.seguro = data
+        });
+      }
+tittle='Seguro';
 }

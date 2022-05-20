@@ -14,8 +14,8 @@ $(function() {
 });
 
 function AgregarClase() {
-    $("a:b").click(function() {
-        $("info-t").addClass("active");
+    $("active").click(function() {
+        $("estado-i").addClass("view");
     });
 }
 // var el = document.getElementById("content-section");
